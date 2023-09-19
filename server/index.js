@@ -1,16 +1,26 @@
-const express = require('express')
+const express = require('express');
 require('dotenv').config;
+
 const mongoose = require('mongoose');
-let app = express()
+const  app = express()
+const cors = require('cors');
+const userRoutes = require("./routes/userRoutes")
+app.use(cors());
+
+app.use('/api/auth',userRoutes);
 
 app.get('/',(req,res)=>{
     res.send("Hello World")
 })
 
+app.get('/gi',(req,res)=>{
+	res.send("Hey world")
+})
+
 const PORT = 3000 || process.env.PORT;
 
 try{
-	mongoose.connect("mongodb+srv://thejashari:gazilions@gazilions.zv47zcb.mongodb.net/?retryWrites=true&w=majority",{
+	mongoose.connect("mongodb+srv://thejashari:thejashari@e-gazilion.evimg4p.mongodb.net/?retryWrites=true&w=majority",{
 		useNewUrlParser:true,
 		useUnifiedTopology:true,
 	}).then(()=>{
