@@ -5,10 +5,15 @@ const mongoose = require('mongoose');
 const  app = express()
 const cors = require('cors');
 
+app.use(cors({
+	origin: 'https://gazilion.vercel.app', 
+	credentials: true,
+}));
+
 app.use(express.json());
 
 const userRoutes = require("./routes/userRoutes")
-app.use(cors());
+// app.use(cors());
 
 app.use('/api/auth',userRoutes);
 
@@ -38,3 +43,5 @@ try{
 app.listen(PORT,()=>{
     console.log('PORT is running on port 3000')
 })
+
+module.exports = app
