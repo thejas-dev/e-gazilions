@@ -6,22 +6,34 @@ import {LiaIndustrySolid} from 'react-icons/lia';
 import {BiRecycle} from 'react-icons/bi';
 import {BsBox} from 'react-icons/bs';
 import {motion} from 'framer-motion';
-
+import Link from 'next/link';
+import VideoComponent from '../components/VideoComponent';
+import ReactPlayer from "react-player/lazy";
+import Header from '../components/Header'
+import FooterComponent from '../components/FooterComponent';
+import dynamic from 'next/dynamic';
+import MvvComponent from '@/components/MvvComponent';
+// const DynamicMvvComponent = dynamic(()=>{
+//     import('../components/MvvComponent'),{ssr:false}
+// })
 
 export default function Home() {
 
 
     const data= [
     {
-        icon:<LiaIndustrySolid className="h-12 w-12 text-black"/>,
+        icon:<LiaIndustrySolid className="h-12 w-12 text-black group-hover:text-sky-500 transition-all duration-200
+        ease-in-out"/>,
         name:"Manufature",
         description:"Manufature the products"
     },{
-        icon:<BiRecycle className="h-12 w-12 text-black"/>,
+        icon:<BiRecycle className="h-12 w-12 text-black group-hover:text-sky-500 transition-all duration-200
+        ease-in-out"/>,
         name:"Recycle",
         description:"Recycle the products"
     },{
-        icon:<BsBox className="h-12 w-12 text-black"/>,
+        icon:<BsBox className="h-12 w-12 text-black group-hover:text-sky-500 transition-all duration-200
+        ease-in-out"/>,
         name:"Reuse",
         description:"Reuse the products"
     }   
@@ -42,23 +54,13 @@ export default function Home() {
           crossOrigin="anonymous"
         />
     </Head>
-    <body>
-        <header className="sticky top-0 backdrop-blur-xl bg-white/20 z-50 flex items-center justify-between w-full 
-        px-3 py-2 border-b-[1px] border-gray-300/50 bg-white/50 shadow-md">
-            <img src="https://ik.imagekit.io/d3kzbpbila/thejashari_varCimS-p"
-            alt="" className="w-[150px] h-[50px] "/>   
-            <div className="flex items-center gap-7 pr-3">
-                <a href="#home" className="text-black hover:text-sky-500" >Home</a>
-                <a href="#home" className="text-black hover:text-sky-500" >About us</a>
-                <a href="#home" className="text-black hover:text-sky-500" >Redeem</a>
-                <a href="/login" className="text-black hover:text-sky-500">Sign in</a>
-            </div>
-        </header>
+    <body className='scroll-smooth' >
+        <Header />
         
         
         <div id="hero" className="h-[100vh]">
             <div className="bg-image">
-                <div className="card rounded-md cursor-pointer bg-white mt-10 p-1" style={{width: "20rem", height: "25rem"}}>
+                <div className="card rounded-md cursor-pointer bg-white mt-10 p-1 w-[20rem] h-[25rem] ">
                     <img src="https://ik.imagekit.io/d3kzbpbila/thejashari_ikjx3UOmf" className="w-full rounded-t-md " alt="..."/>
                     <div className="card-body p-2">
                         <h5 className="card-title text-2xl">E-Gazilion</h5>
@@ -71,32 +73,12 @@ export default function Home() {
         </div>
 
         <div id="mvv" className="min-h-[100vh] flex flex-col items-center 
-        pt-[50px] bg-gray-100 w-full gap-5">
+        pt-[50px] bg-gray-100 w-full gap-5 pb-5">
             <h1 className="text-2xl font-semibold text-gray-900">Product lifecycle</h1>
             <div className="flex md:flex-row flex-col items-center px-10 justify-between w-full mt-[80px] gap-5">
                 {
                     data.map((dat,j)=>(
-                        <motion.div 
-                        initial={{
-                            opacity:0,
-                            x:-50
-                        }}
-                        whileInView={{
-                            opacity:1,
-                            x:0
-                        }}
-                        transition={{
-                            duration:0.5
-                        }}
-                        className={`px-5 py-10 flex bg-white rounded-md md:w-[30%] w-[100%] items-center flex-col gap-5`}>
-                            <div className="p-3 rounded-full bg-gray-300/50">
-                            {
-                                dat.icon
-                            }</div> 
-                            <h1 className="text-lg font-semibold text-gray-800">{dat.name}</h1>
-                            <p className="text-md text-center font-semibold text-gray-600 ">{dat.description}</p>
-
-                        </motion.div>
+                        <MvvComponent dat={dat} j={j} key={j}/>
 
                     ))
                 }
@@ -104,6 +86,38 @@ export default function Home() {
         
 
         </div>
+        <div className="min-h-[125vh] flex flex-col items-center 
+        pt-[160px] w-full gap-5 relative">
+            <div className="z-0 top-0 left-0 w-full h-full absolute">
+              <div className="h-full w-full relative">
+                <div className="w-full absolute h-full bg-black/70 z-20"></div>
+              <ReactPlayer 
+              width="100%"
+              height="100%" 
+              autoPlay={true} controls={false}
+              className="z-10"
+              playing
+              muted
+              url="https://www.youtube.com/embed/k5-OPWYRXZ0?si=foX08WHqtBskN0CM" 
+              light=""/>
+                
+              </div>
+            
+            </div> 
+            <div className='info flex md:flex-row z-10 flex-col px-5 py-2 gap-5'>
+                <img src="https://www.genevaenvironmentnetwork.org/wp-content/uploads/2020/09/ewaste-aspect-ratio-2000-1200-1024x614.jpg" 
+                alt="" width="600" className='mx-auto'  height="400"></img>
+                <div className="item flex flex-col justify-center gap-5">
+                  <span className="text-2xl font-semibold text-white">E-waste</span>
+                  <p className='para text-md text-gray-200'>E-waste management causes stem from the rapid growth of electronic devices and our consumer-driven culture. The importance of reducing e-waste lies in its environmental and social impacts. Electronic waste often contains hazardous materials that can leach into the environment, posing risks to ecosystems and human health. Proper management reduces these risks, conserves valuable resources through recycling, and minimizes energy consumption compared to manufacturing new devices. Additionally, responsible e-waste management creates job opportunities, supports sustainable production practices, and aligns with global efforts to address the growing e-waste problem, promoting a cleaner and more sustainable future.
+                  </p>
+                </div>
+            </div>           
+        </div>
+
+        <VideoComponent  />
+        <FooterComponent />
+        
 
       </body> 
     </>

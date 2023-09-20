@@ -4,6 +4,9 @@ require('dotenv').config;
 const mongoose = require('mongoose');
 const  app = express()
 const cors = require('cors');
+
+app.use(express.json());
+
 const userRoutes = require("./routes/userRoutes")
 app.use(cors());
 
@@ -17,7 +20,7 @@ app.get('/gi',(req,res)=>{
 	res.send("Hey world")
 })
 
-const PORT = 3000 || process.env.PORT;
+const PORT = 3333 || process.env.PORT;
 
 try{
 	mongoose.connect("mongodb+srv://thejashari:thejashari@e-gazilion.evimg4p.mongodb.net/?retryWrites=true&w=majority",{
