@@ -44,9 +44,7 @@ export default function Home() {
     <>
     <Head>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+      
       <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
           rel="stylesheet"
@@ -64,7 +62,7 @@ export default function Home() {
                     <img src="https://ik.imagekit.io/d3kzbpbila/thejashari_ikjx3UOmf" className="w-full rounded-t-md " alt="..."/>
                     <div className="card-body p-2">
                         <h5 className="card-title text-2xl">E-Gazilion</h5>
-                        <p className="card-text text-lg">"Empowering a sustainable future, one discarded device at a time."</p>
+                        <p className="card-text text-lg">&#34;Empowering a sustainable future, one discarded device at a time.&#34;</p>
                         <button className="btn btn-primary bg-blue-600 mt-4 rounded-md text-white hover:scale-[105%] transition-all duration-200 
                         ease-in-out px-4 py-3">Know More</button>
                     </div>
