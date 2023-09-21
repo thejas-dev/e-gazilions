@@ -1,6 +1,8 @@
+"use client"
 
-
-
+import bootstrap from 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.css';
+import {motion} from 'framer-motion';
 
 export default function Home(){
 
@@ -8,33 +10,89 @@ export default function Home(){
     return (
         <main className="w-full min-h-[100vh] bg-gray-100">
                 {/*Tarinisri*/}
-        
 
-                <div className="process gap-5">
-                    <img src="https://static.wixstatic.com/media/ed60a9_0cbed34d949647fe9bb90e49e75531e2~mv2.webp/v1/fill/w_1600,h_800,al_c/ed60a9_0cbed34d949647fe9bb90e49e75531e2~mv2.webp" alt="image" width="600" height="400"></img>
-                    <div className="content text-2xl flex items-center">1.Scan the QR code which is on the machine,you will get an confirmation mail.</div>
+                <h1>Collection Process</h1>
+
+                
+                <div className="container">
+                     <h3>Step-1</h3> 
+                     <motion.img 
+                     initial={{
+                        opacity:0
+                     }}
+                     whileInView={{
+                        opacity:1
+                     }}
+                     viewport={{
+                        once:true
+                     }}
+                     transition={{
+                        duration:1.4
+                     }}
+                     src="https://static.wixstatic.com/media/ed60a9_0cbed34d949647fe9bb90e49e75531e2~mv2.webp/v1/fill/w_1600,h_800,al_c/ed60a9_0cbed34d949647fe9bb90e49e75531e2~mv2.webp" alt="image1" width="600" height="400"/>
                     
-                </div>
+                    <p>Scan the QR code which is on the machine,you will get an confirmation mail.</p> 
+                </div>       
 
-                <div className="process gap-5">
-                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWEhgVEhUZGBgaGhgaGBgYGBgYGBocGBoaGhgYGhgcIS4lHB4rIRoYJjgmKy8xNTU1HCQ7QDs0Py40NTEBDAwMEA8QHxISHzQrJCs0NDQ0NDQ0NDQxNDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDY0NDQ0NDQ0NDQ0NDQ0NP/AABEIALcBEwMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAAAAQIDBAUGBwj/xAA/EAACAQIEAwYDBQYFBAMAAAABAgADEQQSITEFQVEGImFxkaETMoEHQrHB8BRScoKS0SMzorLhFSRi8RdDU//EABkBAAMBAQEAAAAAAAAAAAAAAAABAwIEBf/EACYRAAMAAgIBAwQDAQAAAAAAAAABAhEhAzESBEGREyIyUXGBoWH/2gAMAwEAAhEDEQA/AN0IYiRDmxhiKERDiAXEsLi0EEAOfYqgtKu+fKLsSL+MjY7FI+HKgFihvmtoBrLTt5gWulWmoJBuQdjbWxmUxeMr1Gcoi0kqKFZN9gRe+mtjaKuaYX3MXi66LPB8SpinYsM6kEa9J0PhOMFWijrzAnHcPwZV+Y5jNZ2Y40uGX4dS+Tl4SM+ri68UaXFUrJ0OGJAwfFqVT5HB+ok8S4BwQQ4AFBDhQAIxJijEmACTCMMwoAJhQ2lfieMYdNHrICPuhgzf0rcwAsIJl8X23wyfLnc+QUf6iD7Sr/8AkmnmsaOnUOb+mSAjewrSBwbjFLEpnpNe3zKdGXzH5yxtAYi0IiOWgtABkiJIj5WJKwAYKxBWSCsQVgBHKxJWSSsSVgIj5YUfywQGSxDESIsCAgxBCAigIACAQ7QMbAnpAZSdpHBUId95hOJMM1hL7i+OzVCd9bCZvEgl/Oeb6q09FonCyKomPFQdxG6aW3ktBOBJtlSI+GKnMhKnkQbETS9mO0zZxQxB7x+R+Tf8ypyMdlMjYnhbv8ujA3U8wRtO3gvlmksNolalo6sIdpV9m8Uz0B8T510bzEt7T1CAi0IxZEIiAyPicQiIXd1RRuzEAD6mZvG9uMImzO/8C2Hq5HtMR254q9aoz3Pw0qGnSX7twDmcjmTY2lDg+D1KoLICwFsxuAFv1J1P0gJs3GM+0lR/l0h5uxPsAB7ygxn2g4lvlcJ4Iqj3IY+8zvEuGlHKaFl0bKbjUA6GRBhW6W84hZLTE8YxNXVmdgebsSP9ZtK2tint3mvqRYNfby0tD/ZT95o6mFUkAAsTsNyfoIxZImGcu1rH6S84fw6gSPj1lRSGJCozuCpAykaWJBJBuRpI37E6C7IyA3AJUre29r77xDrAOy/7IcV/Z8RkzE0ySy35Zfn8gyA6dVTpOxqJ57JOjAHukXI2F9NTynd+z2K+LhaVTfNTW/mBZvcGMaJ+WDLHAsPLEaGMkIpHysLLABgrElI+VhFYARykQUkkpElICI2SCSMkEAABDAhgRQEYAAigILQ7RAC0hcXqZaLnwk20g8ap5qDgdIDMHhQX2F47hLJUYsgawtY8jfQxzs/ikpq/xDrfSQOKYlczNmtfWeHfJf1WkdSS8Vkk42qr1lfKArWBHiJb4LCIX+W+kyB4mj07A95SCJf8N4oGZQpIJ0vPU9NOYy1v+Dm5KxWMl/8As4W+VNuZkLG07EOLC+4HKPYjODuWvz5RJw4+Gc2h5GX8l0jOGP8AZ+tlrleTi/1H6E1Vph8Mvw1Dm5ZWBv4c5uKLhlDDmAY2CCIiCI8RG3EBnAO0TEHKf/rqMpHiGYE+3vGhmtpex3text16y77f4QJjK6j7wWoP5hc+6n1kzs72abEYWm7V8qEMMqqSRZiCCSQNxfnvBGKMkzSdhUw5RTVqOGu10RAdBtZjtf8AVrTf4bsXhl+YO5/8nIHolpb4bhtGn/l0kTxCgH13j8TOTnOGwys1sNgnqbm9W4Fje3ha9tb8j10u8PwfHMb/AODhwdwirfnc2AIvrveP8d45kxafDW7U+42+t73sBqRuPOaDhfERWVu6VZTZgfYjwMeEGWUNPscGN8RiKlQ9B3V8hfN7Wljh+zeGTairHq939muJdRDR4RnLKzjOCD4WrSVQMyMFAAAuBddB4gRH2W4vPgyhOtNyPo/eH5yzMy/2fv8AB4jicMdA2YqP4WzL/peKjcs6ZlgtFCAzJQTaFFQrQEIIhERdoREAGyIRjhWJKwAbgi7QQAbWLAiVixGAYEO0IQ7xAFE1EuCOoi7xMBnHe01JqeIdNhe48jKSrmbczc/aXw/5KoHgfrOeJXIPWRfGk9G1WtisN3amux0m/wCzio1PxBnPnrKfAzT9kMcPiZev4ibhvpmKSNwunWLfUQZYfweusoZG2QWIJ3EuuzWJzUsh3QlfpylQbDZbxzhVUpibHQONvERMZqiY25iyIkrAZzX7TsBapSxA2ZTTbzUl0/FhEfZrib0alEnWnUuP4X/5U+s032gYUvgXYC5psj/QHKfZifpOf9hcVkxxS+lWmR/Muo9lPrBdmKWjpphQ4DKEjG8arPSqutNQgY5wwHea+ty3QG4tJPZziLvVy1HJundBN9Ra/wCZjnasKpV6lguUgE9b3mb4VxiklRStyQ1hYHY28JpRGM42Jus/8OjRLQ80QzTIxNpjeIv+z8Yw9bZamUN6/Db2K+k2DNMh9oNEmilRd6b2v0Di3+4LE+jU9nVlEVaQ+CYoVsPTqj79NG+pAv73k+0yVG7QWjmWDLEA1aArHbQiIAM2hWjxWJywAayw4u0EAIYixGc8AqQAfgvGc0PNAB28F4gRQWAyn7V4H4uFdeYBI/KYTCdmqLU+9q1t51VqWZSDzFpi1wuSoyHYE+hmKKceM7OYcY4aaNS26nYxfBK+SopB2N5ue1/Cw9AldxqDOaBrMD+rwlmOScdHaKVXMgYHcCPK4tbeUPZjFh6IB1K6S7pvYaCVMBkG9hoI1ie6A97shB9N/aSnTMP7QxRBBFogNPhnDorDmAY5llR2arf4ZQ7oSPpylxEMicRwoqUnpts6Mh/mBE4Bh65o16TnQ06gDeQNmHoD6z0S04N23wXw8ZiE5FviL5OA4t5aiAM6sGgzSr7M4r4uDpPe5KAHzXun3EsS46yhEpO1lRDSVHUOzG6g7Cw1Y+GsyGE4OwcP8TLreyIF977TQdp6RNUPcZEpnc63La2HPQe0rcNjQQcik2tckhQL+ZnnepfO7xC0WjxU7LHC8ZemQHJdNjcDMo6gje3SaTOCAQbgi4PgZh8S50Olr2NjcA9L7bTU9n3zUst75GK/Q95fY2+k6OD6srHIYvxe5JbGVnaDDfEwtVLXOQkea94e4EumSINPSdJjJF+zPjKHAqlRwGR3QDX5TZ1Pl3rfSbtCCLggjqNROGdnav7PjKtA6KGcAeR7v+m03dDiWhyuVJ5gkfhOd3isM644/Kco3OWC0zFHiFUrpVv/AE39SI9hcZUDXZy3gef9o/NC+mzQWgyw0qBlDDYi4hkzZMbtCtFmEYAJtBBBACkEWqxwJFBYAEqxarCDDrB+0IOYgMdVY4qyIOIpbeE3FEAveAFiqzJ9pxlrAjmJcNxxAQORlR2irByjD1ma6HH5EaqmeiwP7pnG66Wd06MZ2/AIChHUTkXajCmljGB2bX1mJKcm0XHYnH5XyHY6Tfqtpx/gtYpW32M6tRqBkVySRblLIgWSVBfpDDX2kKkLi3peS1JAgAWExXwcRmb5agsfMfr2lyeM0+o9ZmuMUi9JrfMO8vmI1+xOaQddSRe3KJjRp344nIzmn2lMr1qVZRupRvHKcy+xaHie0GQ5ShuN1P5GVHG+L/HplSvykOpO4toR5WJiAv8A7NquahUpE/5b6fwuP7g+s2Zoqs5j2AxmTGlOVSmQP4k1HsG9Z1FU5sZueiVdmb7XKPho9tA2Rj0Djf1C+syXB6gu6moKdwPmUNmIvoCfl5azofaDDiphaiDcqSvmveHuJzzA1Q1NWFhfQnx5309417iLTF00+G3fZmPynN3V8ddGPl7Sx7KuUqFCxbOl7n95Dy/lf2lRTRvADxubem3rJWGrZGR7k/DdGYkWuhOR/wDS5b+WGHjAe5tHaNkmThREbrAKLkgDxNoxHLe1uHZOIo6j/MCWtza/wyP9vrJlDEMo73zbW6efjJH2i0w1OnWpsCUe1wQSAwuDp4qvrNkOD4bH0UqMuV3RWLocrXZQTm5Nr1EhcZeTq4eTxWDL4DiljYnzMvsNxDMwAPifKZLH8EehiGp1GbLupA1ZTsb/AK2ltw5Mumw6bn6mRaOjKaydB4NXuuX6j8x+f1MsjMxw7EHQjcaj+3peaRHDKGGxloeUc9zhhwjDiTNmAQQrwQAxtXjZK5qYvbcbSJW4y7JnQjTcTnn/AFmoCSpsDuOUjrjn1s5AO4EAN7iOMEKKgfTmIzi+NIuV1e4O4v8AlMGXO1zbziQIAbZ+0FJXBU3U721tI47RotQi10O2h0mTWGTEB1HgjU61P5gb7dZO4ng8lNdecw3ZjB1lIqKcqHkec1uJxjOQGOgmKaNzL7JXDWma+0jgmel8dB3k1PiOcvsFUsZaYiiKlJkIvcETCeGVayjgec91x5H6TpPZnGh6QBOo5Tn+NwZp1KlFvuklfLlL3sliSCAOtpeWc9LZ1DD8KqMA1rDxlth+DX+ZtfCQU7QOtNVyagaknSRn4xUY6NbyjEXPFeGU1pEr8w6nUyk4DU7r0m+4TbyO00mHwqmmuYZi1rkm+8z/ABGgMPi1I0VxlPnyipDRRdqez4dS6DvCYSjw6o98iMRqCbadCLmdmxJHw2J1ABPtMzTA+XQDlpv1PhJusI3MeTOWYDFGjXpVDpkqDN4C9m9g07GvEaVrljtf5TtlDfgR6zmnbXgnwGzKbpUuwPRhqw/t5mVSY12RSXc6WN2PIAdegHpKQ8olc4eGdQ4pjGLXoMwyg6EaEqzK1xzGkwHBX7zodLMTltpY8tfrLnsY3dqMxNiQLm/Q3157yEeHrRrtVq1kRDey375HI2011O15SOO3WUtfv2CqhSlnf+k5F208LsekXTTOCpDEMCrE6AZhYkDnoZW1e0FBSBSR6z62J0v7Zj6Rqpj8W++XDJr3nGTRSA2rC+mYagDe2+ko1E/k/gjmn0vk1o4m60UNV8jALnLPZdLZhv8Axeo6SIvF1qkmmwe2hbvb2BFid+unjObGo7ucxZ25XJdtd97y47J1ctV0bS42Olihta3WzH0mHUvUr+29jUNbbNX2i4aHwbtTvcANl00Cm5A8rW8lHQSV9n/GMlBMxOVe54C2w9CJN4aQ1NkO3TwYf+5juzeKGHqYjDupK57WvY90stxob3GWSp4Kys6Om9rcOKmHWuh1pnXxViB9SDb3mZwzaAxxceTRNEE2uGFzrYcj9SPSFSByyNNN6OqE1Oy1wFexE02AxNjb7rezf8zIYUS3w1c6rEnhjpKkawxBicNVzIrdQL+fP3ijLnMFBCvBADzjBDRrbx3MDABm8O8MrDVQYAEDFAiNsusO8AOncPcGkltrCOVVldwB/wDt08pYk3kGdCHcMNZc4ZpT0BrLOkYDOb/aTw/4eISuBo/db8pneEYj4de19Cbj8Z1Ht1gPjYN9NVGYfTWceznuONxoZSWQtbOxUqoemp6iO06llyga+EouzGIZ6QCi9ppMNw6oW17o5jaUMFpwripChKgFhsTIHaVzUDMDewup6ESzwnDkUjMZcLgabIwCi5HODAynDMUK1GxOrLY+BtaZnEYg06jK+hBt6SbgmNGs6bZWuB4GXWJ4VQxIDOlz1DMp+tjrJXP6LcV+L2c97a49Wo01vcl7/TKQfxmOwj2DL0J/XsZ0jt32dpJhS9JLfDKk6kkrexuSfG85i5s/mP1+c1xrBPlfk8ltRx1QBUFRkplrEqPluRmOneNhrYGNVKVAPdRUxDaE6ZKfjcm7WA5m2o6aR7DUg+EqEfMlRH+jAofxv9IiviAyrclm07oDOdTY9zRBryseU1VNvbMqUlpDy4tjlWktOjbU/CX4lQklrd6xsQrEasNvGMVaSqSahLPpc1HLte17ZF+vzNFojXy1AqKBotVtddrUUG+h+6dx4XVVYWs7HcEK5FNf6FBY222G8BEOrjVU2VW1uLEhF12uib69WN+cHD8WRiEcgDvAEKAos2h0HmTLM8PquL4dGDXAzBAi5d/nY5jsJNodjH+fEOVzX0UXJPPvNz16Ss8N10idcspbZquFvZ7X3BHpqPwMy/aKn8LiAcaCoqn67H/aPWXqPke4+6R+W8hfaBS/w6dYbo1ifBgCPdR6ydzh4ZuK6ZY4ZLsD1HtJxUaSs4HWz01bw/8ActRObB3Z0PUDYywwRFz4yspNrLPDHWMwzQ8Lf/Dt0JH5/nJRaQOFN848j+R/KTTLT0QrsO8ERBGI85u4g+ILSMGvFctICJGeGryIYbPAZLL3h6SIKvKLWpADofZ1v+3SW6iUPZR70B5zSAAfMQPOQrs6J6BSOssqbaSvp4/DjdxJ9Cuj/wCW6t5HWLYZQvG0w9FlPMGcHanlqVKZ5MbfQzu1dwFPlOF8ZqWxjkfvSksnaOhfZRxGxembdR+H9p0TFIRUBGt5wvszxE0MWrDYn9frwnUq3aXu5syoPO5lUyJpVTe5AisPxFEcAtfwGswmI7SofvFvrKXiXaCoKlqei8m6xgajtMlsUKqqQjd0nlrtHcFiilzuOl4vs/VfFcOr0qmrgZ0J6jUe4HrIOHe4APQf8zFvBSF5MVxbjlJ6T06iOA6MtxZhqCL30nHMQCLHmpsf16zr70UfdQR4jSUvG+yCVKTvh1yOAWy37rc7WPyk+msnNY7KVx5Wil7H4T4lKup++Anl3Wt7tG+G8PxT08io67lczmnrfNqqDO1jc6np0lx2DoWw2f8Afdj/AE9z8QZplwxzEhsu9rb6zo4lx035vBzcvmkvFZMrhexzC7VqoTnkS1K99ctxdm5b22ltheGYSgQUQM2pJICk/wAzEtvr+rzNpxKs+MFB3CKajUzlFv4CTfNc+BE0ycMRHO5b94k6/mfqTO7i8G/sRx8qtfkx8cRcjLSTvWAsqgMelydR5m0zacbqVHC2ytmdXF8x7tspufAmaZWCa6KBryAH9platBf293pkZCQ4JIF84N7A6mxHK8xz1c4w/g1wzNZyvklsTc6knS8seNUfjcPdbXIp3H8Saj/bGEw1/lDP5Cy/1GXOCS1PIygXvtr6nnznJSb2V84l4yZHsZic1PLfb8/0ZqbzD9nR8HGVKJ0szAeQPd9jNss560zuh5kUj2k/DVReVjGPYVtYjTNPhsWqNnY2W1ieQvax8tpavVUDMWFt73FvWZ96Yekyn7ysPUWnOMTUqVUVPisAuhGY2t0FiRpNyRrs7B/1Gl/+qf1r/eCcW/YF6n9fSCUMGaAhloVoAZkAO14VocTmgAoRauIyRLXhWDv33Gn3R+cAND2expp0LEd65Iv0isTimc3Zr+HKRR79Ir4igW3PtBSkadNrA8o6COpmUgrcHqJGWux2iqbnnGZL1OMv8NkqatbRuvnOTcQqE1WJ6zodj9JRcW4AHJan3WOpHIzPjjo06bWDPipex52khajPa5J8zIVei6HK4IIj+EqCNGWTaWcG99us0lHE03prmOoX63Ez1SqCLxpHym4NyNgNY5b9xPHsdE7O9oloaC50It5yPQ4pdmNtAxvbl0/KZXBvVc9xP7TR8H4e6ZnqWu3IQrFI1LcsslxN9VNxzHh1ETT4pbOzGygMTfkBc/hFHCITfLY/+JK/hKztTwtP2J2pgq6shY5mJZCcpBubW1B+kk4Z0LmSXRF7EccVaLpUUnK7HTkH723nmmxoYtKgvTa9t1OjDzE5TwGplrsvJ0081/TToXC+GKuWoHYkgHTujUajxlVxeS0cd+oXHujBcWrFcYzpcsHVlA3urdPqZva+Kq1Tmp0ygI3fQjTTe1voGk6nhUQlkRVJ1JAAJPidzJNMprnzeAW2u/M7cp0cc1C7ODm9X5v7V8lH/wBJdzepVI/g3/rbb6ASXheC06YzrT2++12OuujNtfwkvEcUSkLlkpjXVmHW4+bc6CUOK7ZIzWph67eAKr/U35CNte5JfUvSz/XRfQl3EpzxF2F7BeoAJPqZI4fVPxdTfQ7n66frpM1awUj0tZTbwZXtLT+DxJX5OqsfMdxvYCaym9x5zKfaBiVavRRTdlDk2N7BrWHsZf4et3R5CclHscT0SajQU6xvoJEepzhUqlzoDM5Ns0lHF2pszaBVJN+gFzMBQfW+hO+m4HipFwPEEjwmg4vi8tHJ96p3bdF+8fTT6zPoLDfy3sPIH5fLabn9kr7wTWrDoIJXNUgmzBnFaJPjCMTeIBRMMmDSETAB7DJmYL1M0RFgAPISh4Y9qimXVRrDxMaAD1rd0HzMKm2sjomt5LorbXYwAeU8vXwhWI3h2vtt16xwRgLQnQ6+MWKu2YX8Rv5xFNgNSfpFdw66iADWP4etZe8L9GG485ka3D3puVYgDkx5jrNqrKD3WPpE47ApVAzWuNj+IMTQGUw2HDmwu3jsJqeH8IRV7y3MlYbhyJaw9JY00HKGAKzhNQJUdOhl2ja29Jn6Yy4zXnNEp8IkbrvI5T31Ebx9IvTdAvzoy6mwFxYH1tHEq5TqOtryLiceQb2vrMVWNG+OFXZguIcJrYR6T1VsM1gwN1P7wv1tfebvhWNRaIFRgMpI13I3Fhvz9oz2lqrXwFRW3Vc6+a6/3H1mc4ZiBUpKwN2AAYcwRvK8NnN6rgVaZrBxQOSKSlrbk6DX1MzPF6/EWqtTUZFF7MoCqRa98xub26Wk/h3EqVHOajqoIXci5tfYbkxjGdu6a/5KM56nuj03O/Saq3klx+niVpfJAwnZnM2aqz1W52zEfVjqdj05dZNxeHo0qlL4lSnTVSWyL3nPIfLcdfmIlBj+1GKrAqWVFP3VWx9dTf0ldQwDOczN5ljcn6b+8w6LzLNPju1NJNKSu+m5CqL+n99pTVu0GJdu53P4Rdum5ufQQ8PgUU97X2HtLPDYYHRFA8hpMuzc8ZS4HBuaoZyWYm5JNz5kzagaQYPhgQZm3ia9VVNrybbZZJShL1LCIFfLrGMTihykB6s1M/sxVY6H8RiCzXOp/CRmqRoPEu8oSF54IzmggBTw7c4IIgCtAw5QQQAdwzWqL5iXtdrtaCCNABVgzG+sEEAFq99Pr6R9X6QoIAPLrroPpyh/EA3F/wBdIIIALFZbXsbX9IPijmDp4/lDgjAkYPElTcd4X2M2fCaVGsmZUseY8YIImNFTjcKq4+n3RZgfWaxMMg2A9IIJgpXsRuKcPWrTKjuturAbHxHMTGY3h2KTT4YbldWWx/qIPtCgmWOWxvE9msW9FkL06eca95ibb5e6LC/W5mPr9mMSrW+EQdsyVEs3jYsCIII1paM1t7EY7stXooKlZO6Re+dTa/UA3/GVgS0EE0JIK0dpORsYIIgRb4LCs2rGaTA0QqjrBBJsqhHE8eQMolHmJNyYIJSeiVdgdozeCCbMAMacwQQAReCCCAH/2Q==" alt="image" width="600" height="400"></img>
-                    <div className="content text-2xl flex items-center">2.scan your e-waste</div>
+                <div className="container">
+                    <h3>Step-2</h3>
+                    <motion.img 
+                    initial={{
+                        opacity:0
+                    }}
+                    whileInView={{
+                        opacity:1
+                    }}
+                    viewport={{
+                        once:true
+                    }}
+                    transition={{
+                        duration:1.4
+                    }}
+                    src="https://yaffa-cdn.s3.amazonaws.com/packaging/images/dmImage/StandardImage/GoScan_Coffee.jpg" alt="image2" width="600" height="400"/>
+
+                    <p>Scan your e-waste</p> 
+                </div>     
+
+                <div className="container">
+                    <h3>Step-3</h3> 
+                    <motion.img 
+                    initial={{
+                        opacity:0
+                    }}
+                    whileInView={{
+                        opacity:1
+                    }}
+                    viewport={{
+                        once:true
+                    }}
+                    transition={{
+                        duration:1.4
+                    }}
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb4eSenZmufqbOtw-UbYBR-p0r96fZiVYQshG5GJKmthWPHA_5SFIj7EytSHv0v52exhI&usqp=CAU" alt="image1" width="600" height="400"/>
+                
+                    <p>Stick the label on your e-waste.</p> 
+                </div>     
+
+                <div className="container">
+                    <h3>Step-4</h3> 
+                    <motion.img 
+                    initial={{
+                        opacity:0
+                    }}
+                    whileInView={{
+                        opacity:1
+                    }}
+                    viewport={{
+                        once:true
+                    }}
+                    transition={{
+                        duration:1.4
+                    }}
+                    src="https://imgs.waste-management-world.com/m/2944_2_1200-0-1.85_.jpg" alt="image1" width="600" height="400"/>
                     
-                </div>
-
-                <div className="process gap-5">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb4eSenZmufqbOtw-UbYBR-p0r96fZiVYQshG5GJKmthWPHA_5SFIj7EytSHv0v52exhI&usqp=CAU" alt="image" width="600" height="400"></img>
-                    <div className="content text-2xl flex items-center">3.stick the label on yr e-waste.</div>
-                    
-                </div>
-
-                <div className="process gap-5">
-                    <img src="https://imgs.waste-management-world.com/m/2944_2_1200-0-1.85_.jpg" alt="image" width="600" height="400"></img>
-                    <div className="content text-2xl flex items-center">4.scan the label and drop it inside the machine when it opens.</div>
-                    
-                </div>
-
-
+                    <p>Scan the label and drop it inside the machine when it opens</p> 
+                </div>            
      
         
 
