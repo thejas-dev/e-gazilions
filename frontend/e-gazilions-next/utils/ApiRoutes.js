@@ -1,4 +1,4 @@
-export const host = `https://turbo-space-waffle-qj79gjwvqrvhxwxj-3333.app.github.dev`
+export const host = `https://gazilion-server.vercel.app`
 
 
 export const register = `${host}/api/auth/register`;
