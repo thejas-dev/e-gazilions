@@ -98,7 +98,7 @@ export default function Home() {
 		                    Login
 		                </button>
 
-		                <h1 className="text-sm text-gray-800 font-semibold mt-2 mb-2">New user? 
+		                <h1 className="text-sm text-gray-300 font-semibold mt-2 mb-2">New user? 
 		                    <span 
 		                    onClick={()=>router.push('/signup')}
 		                    className="cursor-pointer hover:text-sky-500 text-sky-600"> Sign up</span></h1>
