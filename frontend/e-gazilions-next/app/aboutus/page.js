@@ -1,7 +1,5 @@
 "use client"
 import Head from 'next/head';
-import bootstrap from 'bootstrap'
-import 'bootstrap/dist/css/bootstrap.css';
 
 export default function Home(){
 
