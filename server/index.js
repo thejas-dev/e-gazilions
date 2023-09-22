@@ -5,15 +5,15 @@ const mongoose = require('mongoose');
 const  app = express()
 const cors = require('cors');
 
-// app.use(cors({
-// 	origin: 'https://gazilion.vercel.app', 
-// 	credentials: true,
-// }));
+app.use(cors({
+ 	origin: 'https://gazilion.vercel.app', 
+	credentials: true,
+}));
 
 app.use(express.json());
 
 const userRoutes = require("./routes/userRoutes")
-app.use(cors());
+//app.use(cors());
 
 app.use('/api/auth',userRoutes);
 
