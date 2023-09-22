@@ -70,7 +70,7 @@ export default function Home() {
 		            <h1 className="text-xl font-bold text-gray-300">USER LOGIN</h1>
 		            <div className="mt-2 h-[1px] w-[95%] mx-auto bg-gray-600/30"></div>
 		            <div className="mt-0 flex flex-col w-full">
-		                <div className="rounded-md w-full  py-3 flex flex-col gap-1 ">
+		                <div className="rounded-md w-full  py-3 flex flex-col">
 		                    <h1 className="text-md font-semibold text-start text-gray-200">Email ID</h1>
 		                    <div className="bg-white/30 flex items-center px-2 py-2 gap-2 backdrop-blur-md
 		                    border-[1px] focus-within:border-sky-500 border-gray-500 rounded-md">
@@ -80,7 +80,7 @@ export default function Home() {
 		                        />
 		                    </div>
 		                </div>
-		                <div className="rounded-md w-full flex flex-col gap-1 ">
+		                <div className="rounded-md w-full flex flex-col ">
 		                    <h1 className="text-md font-semibold text-start text-gray-200">Password</h1>
 		                    <div className="bg-white/30 flex items-center px-2 py-2 gap-2 backdrop-blur-md
 		                    border-[1px] focus-within:border-sky-500 border-gray-500 rounded-md">
