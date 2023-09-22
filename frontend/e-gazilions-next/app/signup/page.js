@@ -131,7 +131,7 @@ export default function Home() {
 		                    Sign up
 		                </button>
 
-		                <h1 class="text-sm text-gray-800 font-semibold mt-2 mb-2">Already have an account? 
+		                <h1 class="text-sm text-gray-300 font-semibold mt-2 mb-2">Already have an account? 
 		                    <span class="cursor-pointer hover:text-sky-500 text-sky-600"> Login</span></h1>
 
 		            </div>
