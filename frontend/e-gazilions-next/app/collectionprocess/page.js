@@ -1,7 +1,4 @@
 "use client"
-
-import bootstrap from 'bootstrap'
-import 'bootstrap/dist/css/bootstrap.css';
 import {motion} from 'framer-motion';
 
 export default function Home(){
