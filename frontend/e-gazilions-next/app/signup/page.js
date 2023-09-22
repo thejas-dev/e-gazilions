@@ -84,7 +84,7 @@ export default function Home() {
 		            <div class="mt-2 h-[1px] w-[95%] mx-auto bg-gray-600/30"></div>
 		            <div class="mt-0 z-0 flex flex-col w-full">
 		                <div class="rounded-md w-full py-3 flex flex-col gap-1 ">
-		                    <h1 class="text-md font-semibold text-gray-800">Name</h1>
+		                    <h1 class="text-md font-semibold text-gray-200 text-start">Name</h1>
 		                    <div class="bg-white/30 flex items-center px-2 py-2 gap-2 backdrop-blur-md
 		                    border-[1px] focus-within:border-sky-500 border-gray-500 rounded-md">
 		                        <input type="text" placeholder="Enter user name" value={name}
@@ -94,7 +94,7 @@ export default function Home() {
 		                    </div>
 		                </div>
 		                <div class="rounded-md w-full pb-3 flex flex-col gap-1 ">
-		                    <h1 class="text-md font-semibold text-gray-800">Email ID</h1>
+		                    <h1 class="text-md font-semibold text-gray-200 text-start">Email ID</h1>
 		                    <div class="bg-white/30 flex items-center px-2 py-2 gap-2 backdrop-blur-md
 		                    border-[1px] focus-within:border-sky-500 border-gray-500 rounded-md">
 		                        <input type="email" placeholder="Enter email ID" value={email}
@@ -104,7 +104,7 @@ export default function Home() {
 		                    </div>
 		                </div>
 		                <div class="rounded-md w-full flex flex-col gap-1 ">
-		                    <h1 class="text-md font-semibold text-gray-800">Password</h1>
+		                    <h1 class="text-md font-semibold text-gray-200 text-start">Password</h1>
 		                    <div class="bg-white/30 flex items-center px-2 py-2 gap-2 backdrop-blur-md
 		                    border-[1px] focus-within:border-sky-500 border-gray-500 rounded-md">
 		                        <input type="password" placeholder="Enter password" value={password}
@@ -114,7 +114,7 @@ export default function Home() {
 		                    </div>
 		                </div>
 		                <div class="rounded-md w-full mt-3 flex flex-col gap-1 ">
-		                    <h1 class="text-md font-semibold text-gray-800">Confirm password</h1>
+		                    <h1 class="text-md font-semibold text-gray-200 text-start">Confirm password</h1>
 		                    <div class="bg-white/30 flex items-center px-2 py-2 gap-2 backdrop-blur-md
 		                    border-[1px] focus-within:border-sky-500 border-gray-500 rounded-md">
 		                        <input type="password" placeholder="Enter password" value={confirmPassword}
