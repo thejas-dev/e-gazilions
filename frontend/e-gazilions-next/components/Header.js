@@ -21,6 +21,7 @@ export default function Header(){
             />   
             <div className="md:flex hidden items-center gap-7 pr-3">
                 <Link href="#home" className="text-black hover:text-sky-500" >Home</Link>
+                <Link href="/facilities" className="text-black hover:text-sky-500" >Facilities nearby</Link>
                 <Link href="/aboutus" className="text-black hover:text-sky-500" >About us</Link>
                 <Link href="/collectionprocess" className="text-black hover:text-sky-500" >Collection process</Link>
                 <Link href="#home" className="text-black hover:text-sky-500" >Redeem</Link>
@@ -45,6 +46,7 @@ export default function Header(){
                 </div>
                 <div className="flex flex-col justify-center h-full items-center gap-7 pr-3">
                     <Link href="#home" className="text-black text-lg hover:text-sky-500 font-semibold" >Home</Link>
+                    <Link href="#home" className="text-black text-lg hover:text-sky-500 font-semibold" >Facilities nearby</Link>
                     <Link href="/aboutus" className="text-black text-lg hover:text-sky-500 font-semibold" >About us</Link>
                     <Link href="/collectionprocess" className="text-black text-lg hover:text-sky-500 font-semibold" >Collection process</Link>
                     <Link href="#home" className="text-black text-lg hover:text-sky-500 font-semibold" >Redeem</Link>

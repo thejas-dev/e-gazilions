@@ -112,6 +112,33 @@ h1{
 }
 
 
+.map-container {
+  position: fixed;
+  z-index: 20;
+  height: 100%;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+}
+.calculation-box{
+height: 75px;
+width: 150px;
+position: fixed;
+bottom: 40px;
+right: 10px;
+z-index: 50;
+background-color: rgba(255, 255, 255, 0.9);
+padding: 15px;
+text-align: center;
+}
+ 
+.text-p {
+font-family: 'Open Sans';
+margin: 0;
+font-size: 13px;
+}
 
 
 
@@ -142,4 +169,7 @@ h1{
   padding: 10px;
 }
 
+.ecommerce-bg{
+  
+}
 /* npm run dev */

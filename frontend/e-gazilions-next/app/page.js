@@ -63,8 +63,9 @@ export default function Home() {
                     <div className="card-body p-2">
                         <h5 className="card-title text-2xl">E-Gazilion</h5>
                         <p className="card-text text-lg">&#34;Empowering a sustainable future, one discarded device at a time.&#34;</p>
-                        <button className="btn btn-primary bg-blue-600 mt-4 rounded-md text-white hover:scale-[105%] transition-all duration-200 
-                        ease-in-out px-4 py-3">Know More</button>
+                        <a href="#know-more"><button
+                        className="btn btn-primary bg-blue-600 mt-4 rounded-md text-white hover:scale-[105%] transition-all duration-200 
+                        ease-in-out px-4 py-3">Know More</button></a>
                     </div>
                 </div>
             </div>
@@ -84,7 +85,7 @@ export default function Home() {
         
 
         </div>
-        <div className="min-h-[125vh] flex flex-col items-center 
+        <div id="know-more" className="min-h-[125vh] flex flex-col items-center 
         pt-[160px] w-full gap-5 relative">
             <div className="z-0 top-0 left-0 w-full h-full absolute">
               <div className="h-full w-full relative">

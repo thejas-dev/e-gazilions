@@ -8,10 +8,10 @@ export default function Home(){
         <main className="w-full min-h-[100vh] bg-gray-100">
                 {/*Tarinisri*/}
 
-                <h1>Collection Process</h1>
+                <h1 className="block bg-green-600 m-4  ">Collection Process</h1>
 
                 
-                <div className="container">
+                <div className="container block bg-green-400">
                      <h3>Step-1</h3> 
                      <motion.img 
                      initial={{
@@ -28,7 +28,7 @@ export default function Home(){
                      }}
                      src="https://static.wixstatic.com/media/ed60a9_0cbed34d949647fe9bb90e49e75531e2~mv2.webp/v1/fill/w_1600,h_800,al_c/ed60a9_0cbed34d949647fe9bb90e49e75531e2~mv2.webp" alt="image1" width="600" height="400"/>
                     
-                    <p>Scan the QR code which is on the machine,you will get an confirmation mail.</p> 
+                    <p>Scan the QR code on the machine,You will get an url.click that you will be redirected to our website.</p> 
                 </div>       
 
                 <div className="container">
