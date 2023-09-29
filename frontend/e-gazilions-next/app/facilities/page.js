@@ -1,11 +1,7 @@
 "use client"
 
 import mapboxgl from 'mapbox-gl';
-import MapboxDraw from '@mapbox/mapbox-gl-draw'
-import Head from 'next/head';
-import * as turf from '@turf/turf'
 import { useEffect, useRef } from 'react';
-import Header from '@/components/Header';
 
 mapboxgl.accessToken = "pk.eyJ1IjoidGhlamFzaGFyaSIsImEiOiJjbGViNGxneGIxNXk4M3FtZXN2bmlybnZ2In0.xH_17wx1jpV5Kfw7ntyAbQ";
 
